@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx,fullpage,amsmath,subfigure,mathrsfs,fullpage}
+\title{Title Goes Here}
+\author{Kyle Story\\University of Chicago}
+\date{19 March 2010}
+\bibliographystyle{plain}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+  Abstract here...
+  \\ Lab Partner: Wayne and Garth
+\end{abstract}
+
+\tableofcontents
+\listoffigures
+\newpage
+
+\section{Introduction}
+Blah blah.  Introduce the cast.
+
+Citation: \cite{hu02a}
+
+Reference to figure \ref{fig:sin}.
+
+\subsection{Classical Description}
+
+% equation
+\begin{equation}
+  p = \alpha E
+\label{eqn:dipole_moment}
+\end{equation}
+where $\alpha$ is called the \textit{polarizability} of the atom.
+
+% enumerate
+\begin{enumerate}
+  \item Voltage Bias across the Photo multiplier tube
+\end{enumerate}
+
+% table
+\begin{table}
+  \caption{Caption goes here}
+  \begin{center}
+    \begin{tabular}{|| l | c | c | c | l ||}
+      \hline
+      Chemical & peak &  $\Delta \nu$ (cm$^{-1}$) & Intensity (arbitrary) & literature\\
+      \hline\hline
+      $CS_2$ (P)    & $\nu_1$  & 657.45 $\pm$ 0.06 & 4.77  $\pm$ 0.01  & a) 660 \\
+                    & $\nu_2$  & 797.2  $\pm$ 0.1  & 0.701 $\pm$ 0.007 & a) 800 \\
+                    & as1  & 656.4  $\pm$ 0.4  & 0.174 $\pm$ 0.008 & a) -  \\
+      \hline
+      $CS_2$ (D)    & $\nu_1$  & 655.9  $\pm$ 0.4  & 0.426 $\pm$ 0.008 & \\
+                    & $\nu_2$  & 799    $\pm$ 3    & 0.068 $\pm$ 0.005 & \\
+                    & as1  & NR & NR & \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \label{tab:data1}
+\end{table}
+
+%% \begin{figure}
+%%   \centering
+%%   \resizebox{0.6\linewidth}{!}{\includegraphics{}}
+%%   \caption{Top view of the experimental setup}
+%%   \label{diag:experimentSetup}
+%% \end{figure}
+
+\begin{figure}
+  \centering 
+  \subfigure [A simple sine function] {
+  \resizebox{0.35\linewidth}{!}{\includegraphics{sin_20110405.pdf}}
+  } 
+  \subfigure [The fft of this sine function] {
+  \resizebox{0.6\linewidth}{!}{\includegraphics{sin_fft20110405.pdf}}
+  } 
+  \caption{Basic FFT analysis}
+\label{fig:sin}
+\end{figure}
+
+\pagebreak
+
+\bibliography{template}
+
+\end{document}
